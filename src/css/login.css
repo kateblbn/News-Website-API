@@ -1,0 +1,29 @@
+.form__btn {
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid rgb(85, 102, 200);
+    &:hover {
+        background-color:rgb(137, 151, 227);
+        color: white;
+        transition: .5s all;
+    }
+}
+.btn__hover {
+        &:hover {
+            background-color:rgb(137, 151, 227);
+            color: black;
+            border: 1px solid rgb(101, 120, 230);
+            transition: .5s all;
+        }
+    
+    }
+.login__title {
+    text-align: center;
+}
+.login-center {
+    text-align: start;
+
+}
