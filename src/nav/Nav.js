@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import '../css/nav.css'
 import logo from "../img/logo.png";
 import login from "../img/Login.png";
@@ -57,57 +57,59 @@ function Nav() {
         setRotateRight(!rotateRight)
         setHide(!hide)
     }
-    const activeHamburger = (open)? 'active' : 'noActive';
-    const left = (rotateLeft)? 'rotateLeft' : '';
-    const right = (rotateRight)? 'rotateRight' : '';
-    const hidden = (hide)? 'hiddenL' : '';
-  return (
-    <div>
-        <div className='hamburger' onClick={changeClass}>
-            <HambLine className={left}></HambLine>
-            <HambLine className={hidden}></HambLine>
-            <HambLine className={right}></HambLine>
+    const activeHamburger = (open) ? 'active' : 'noActive';
+    const left = (rotateLeft) ? 'rotateLeft' : '';
+    const right = (rotateRight) ? 'rotateRight' : '';
+    const hidden = (hide) ? 'hiddenL' : '';
+    return (
+        <div>
+            <div className='hamburger' onClick={changeClass}>
+                <HambLine className={left}></HambLine>
+                <HambLine className={hidden}></HambLine>
+                <HambLine className={right}></HambLine>
+            </div>
+            <Menu className={activeHamburger}>
+                <ul >
+                    <li>
+                        <NavLink className='navigation__link white' to='/'>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navigation__link white' to='/about'>About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navigation__link white' to='/contact'>Contact Us</NavLink>
+                    </li>
+                </ul>
+                <div className='nav__img-login '>
+                    <a href='/login' className='menu__center'>Login <img className='image__menu' src={login} alt='login' /></a>
+                </div>
+
+            </Menu>
+            <div className='navigation__wrapper'>
+                <div className='nav__img-logo'>
+                    <Link to={`/`} >
+                        <img className='nav__logo' src={logo} alt='logo' />
+                    </Link>
+                </div>
+
+                <ul className='navigation'>
+                    <li>
+                        <NavLink className='navigation__link' to='/'>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navigation__link' to='/about'>About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navigation__link' to='/contact'>Contact Us</NavLink>
+                    </li>
+                </ul>
+                <div className='nav__img-login'>
+                    <a href='/login'> <img className='nav__login' src={login} alt='login' /></a>
+                </div>
+            </div>
         </div>
-        <Menu className={activeHamburger}>
-            <ul >
-                <li>
-                    <NavLink className='navigation__link white' to='/'>Home</NavLink>
-                </li>
-                <li>
-                    <NavLink className='navigation__link white' to='/about'>About</NavLink>
-                </li>
-                <li>
-                    <NavLink className='navigation__link white' to='/contact'>Contact Us</NavLink>
-                </li>
-            </ul>
-            <div className='nav__img-login '>
-                <a href='/login' className='menu__center'>Login <img className='image__menu' src={login} alt='login'/></a>
-            </div>
 
-        </Menu>
-        <div className='navigation__wrapper'>
-            <div className='nav__img-logo'>
-                <img className='nav__logo' src={logo} alt='logo'/>
-            </div>
-
-            <ul className='navigation'>
-                <li>
-                    <NavLink className='navigation__link' to='/'>Home</NavLink>
-                </li>
-                <li>
-                    <NavLink className='navigation__link' to='/about'>About</NavLink>
-                </li>
-                <li>
-                    <NavLink className='navigation__link' to='/contact'>Contact Us</NavLink>
-                </li>
-            </ul>
-            <div className='nav__img-login'>
-                <a href='/login'> <img className='nav__login' src={login} alt='login'/></a>
-            </div>
-        </div>
-    </div>
-
-  )
+    )
 }
 
 export default Nav

@@ -4,25 +4,31 @@
     font-size: 20px;
     padding: 0;
 }
+
 .navigation__link {
     font-size: 25px;
+
     &:hover {
         border-bottom: 2px solid black;
     }
+
     /* &:focus {
         color: black;
         border-bottom: 2px solid red;
     } */
 }
+
 .navigation__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .nav__logo {
     width: 200px;
 }
+
 .nav__login {
     width: 50px;
 }
@@ -34,13 +40,15 @@
     z-index: 31;
     width: 30px;
     height: 30px;
-    top: 10px ;
+    top: 10px;
     left: 10px;
 
 }
+
 .noActive {
     display: none;
 }
+
 .active {
     display: block;
     opacity: 0.8;
@@ -49,71 +57,87 @@
     justify-content: center;
     transition: 0.5s all;
 }
+
 ul {
     padding-inline-start: 0;
 }
+
 .rotateLeft {
     transform: rotate(45deg);
     position: absolute;
     margin-top: 10px;
 
 }
+
 .rotateRight {
     transform: rotate(-45deg);
     position: absolute;
     margin-top: 10px;
 
-} 
-.hiddenL {
-display: none !important;
 }
+
+.hiddenL {
+    display: none !important;
+}
+
 @media (max-width: 991px) {
     .navigation__link {
         font-size: 20px;
     }
 
 }
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        }    
+    }
+
     .navigation {
         display: none;
 
     }
+
     .nav__logo {
         width: 100px;
     }
+
     .nav__img-logo {
         margin: 0 auto;
     }
+
     .nav__login {
         width: 20px;
     }
+
     .menu__center {
         align-items: center;
         display: flex;
     }
+
     .nav__login {
         display: none;
     }
 
 }
+
 @media (max-width: 575px) {
     .nav__logo {
         width: 100px;
     }
+
     .navigation__link {
         color: white;
+
         &:hover {
             border-bottom: 2px solid black;
-            width:100%;
+            width: 100%;
         }
+
         &:focus {
             color: rgb(76, 33, 204);
-            width:100px;
+            width: 100px;
             border-bottom: 2px solid rgb(9, 9, 9);
         }
-    
+
     }
 }

@@ -2,22 +2,20 @@ import React, { useEffect } from 'react'
 
 function About() {
   const link = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=e049c021c1e74550890c65ff8c78af6e';
-  useEffect( () => {
-     const getNews = async () => {
+  useEffect(() => {
+    const getNews = async () => {
       try {
-        const connect =  await fetch( link, {
+        const connect = await fetch(link, {
           method: 'GET'
         })
-        console.log(connect.ok);
-        const res = (!connect.ok)? 'no get data' : 'get data ';
+        console.log(connect);
+        const res = (!connect.ok) ? 'no get data' : 'get data ';
         console.log(res);
-        // .then(response => response.json())
-        // .then(json => console.log(json))  
       } catch (error) {
         console.log('no connection');
       }
-     }
-     getNews()
+    }
+    getNews()
   })
   return (
     <div className='about__center'>
@@ -28,18 +26,3 @@ function About() {
 }
 
 export default About
-
-// useEffect( () => {
-//   const getNews = async () => {
-//    try {
-//      await fetch( link, {
-//        method: 'GET'
-//      })
-//      .then(response => response.json())
-//      .then(json => console.log(json))  
-//    } catch (error) {
-//      console.log('no connection');
-//    }
-//   }
-//   getNews()
-// })

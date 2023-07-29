@@ -1,0 +1,35 @@
+html,
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+
+}
+
+@media (max-width: 768px) {
+    .sing__title {
+        font-size: 33px;
+    }
+
+    .formData {
+        width: 300px !important;
+    }
+
+    .marginLeft {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .sing__title {
+        font-size: 25px;
+    }
+
+    .formData {
+        width: 250px !important;
+    }
+}
