@@ -27,7 +27,7 @@ function ContactForm() {
           <input className='email brd' type='email' placeholder='Email*' {...register('email', { required: 'Please Enter your email' })} />
           {errors.email && <p className='contact__err-msg'>{errors.email.message}</p>}
           <textarea className='text brd' type='text' />
-          <button className='btn'>SEND</button>
+          <button className='btn'>SEND</button> 
         </form>
       </div>
     </div>

@@ -10,7 +10,7 @@ function OneNews() {
   const filterData = articles?.filter((el) => el.title === title)
   console.log(filterData);
   const mapData = filterData?.map((el, i) => {
-    return <TemplOneNews author={el.author} descr={el.description} content={el.content} urlToImage={el.urlToImage} url={el.url} />;
+    return <TemplOneNews content={el.content} urlToImage={el.urlToImage} url={el.url} />;
     // return el.content;
   })
   console.log(mapData);

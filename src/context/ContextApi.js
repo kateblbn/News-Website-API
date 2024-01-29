@@ -9,7 +9,7 @@ function ContextApi(props) {
   console.log(articles);
   useEffect(() => {
     const getData = async () => {
-      fetch(link, {
+      await fetch(link, {
         method: 'GET',
         headers: {
           Authorization: 'e049c021c1e74550890c65ff8c78af6e'

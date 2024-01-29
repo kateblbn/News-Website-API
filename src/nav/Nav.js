@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import '../css/nav.css'
+import nav from '../css/nav.module.css'
 import logo from "../img/logo.png";
 import login from "../img/Login.png";
 import { styled } from 'styled-components';
 
 const Menu = styled.div`
-position: fixed;
+display: none;
+position: absolute;
 height: 100vh;
 background-color: rgb(108, 108, 151) ;
 width: 250px;
@@ -19,7 +21,6 @@ align-items:  center;
 .image__menu {
     width: 30px;
     margin-left: 5px;
-
 }
 .white {
     color: white;
@@ -57,13 +58,13 @@ function Nav() {
         setRotateRight(!rotateRight)
         setHide(!hide)
     }
-    const activeHamburger = (open) ? 'active' : 'noActive';
+    const activeHamburger = (open) ? 'active' : '';
     const left = (rotateLeft) ? 'rotateLeft' : '';
     const right = (rotateRight) ? 'rotateRight' : '';
     const hidden = (hide) ? 'hiddenL' : '';
     return (
         <div>
-            <div className='hamburger' onClick={changeClass}>
+            <div className={nav.hamburger} onClick={changeClass}>
                 <HambLine className={left}></HambLine>
                 <HambLine className={hidden}></HambLine>
                 <HambLine className={right}></HambLine>
@@ -85,14 +86,14 @@ function Nav() {
                 </div>
 
             </Menu>
-            <div className='navigation__wrapper'>
+            <div className={nav.navigation__wrapper}>
                 <div className='nav__img-logo'>
                     <Link to={`/`} >
                         <img className='nav__logo' src={logo} alt='logo' />
                     </Link>
                 </div>
 
-                <ul className='navigation'>
+                <ul className={nav.navigation}>
                     <li>
                         <NavLink className='navigation__link' to='/'>Home</NavLink>
                     </li>
