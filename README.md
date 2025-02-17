@@ -1,4 +1,5 @@
 Welcome to  my Daily News - project 
+
 OBS.: In this project was used BBC News API - so dont be confused if you will open and news dont shows.
 
 Here are some templates of the project.
